@@ -996,9 +996,6 @@ namespace Test {
             foreach (double a in TestUtilities.GenerateRealValues(1.0E-2, 1.0E4, 16)) {
                 foreach (double b in TestUtilities.GenerateRealValues(1.0E-2, 1.0E4, 16)) {
                     foreach (double x in TestUtilities.GenerateRealValues(1.0E-4, 1.0, 8)) {
-                        if (!TestUtilities.IsNearlyEqual(
-                            AdvancedMath.LeftRegularizedBeta(a, b, x) + AdvancedMath.LeftRegularizedBeta(b, a, 1.0 - x), 1.0
-                        )) Console.WriteLine("{0} {1} {2} {3} {4}", a, b, x, AdvancedMath.LeftRegularizedBeta(a, b, x), AdvancedMath.LeftRegularizedBeta(b, a, 1.0 - x));
                         Assert.IsTrue(TestUtilities.IsNearlyEqual(
                             AdvancedMath.LeftRegularizedBeta(a, b, x) + AdvancedMath.LeftRegularizedBeta(b, a, 1.0 - x), 1.0
                         ));

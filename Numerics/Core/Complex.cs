@@ -326,11 +326,17 @@ namespace Meta.Numerics {
             return (new Complex(a + z.Re, z.Im));
 		}
 
-        /*
-		public static Complex operator- (Complex z, double a) {
-			return( new Complex(z.Re -a, z.Im) );
+        /// <summary>
+        /// Subtracts a real number from a complex number.
+        /// </summary>
+        /// <param name="z">The complex number.</param>
+        /// <param name="a">The real number.</param>
+        /// <returns>The difference z - a.</returns>
+        public static Complex operator- (Complex z, double a) {
+			return( new Complex(z.Re - a, z.Im) );
 		}
 
+        /*
 		public static Complex operator- (double a, Complex z) {
 			return( new Complex(a - z.Re, -z.Im) );
 		}
